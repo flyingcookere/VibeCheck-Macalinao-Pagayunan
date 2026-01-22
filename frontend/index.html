@@ -6,40 +6,69 @@
   <title>VibeCheck 411L</title>
 
   <style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #ffccd9; /* darker pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    background-color: #ffe4ec; /* soft inner pink */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+
   button {
-    background-color: #ffc0cb; /* light pink */
+    background-color: #ffc0cb; /* light pink buttons */
     color: #5a2a3c;
     border: none;
     padding: 10px 16px;
-    margin: 5px;
+    margin: 6px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
   }
 
   button:hover {
-    background-color: #ffb6c1; /* slightly darker light pink */
+    background-color: #ffc0cb; /* stays same color */
+  }
+
+  pre {
+    background-color: #ffd6e3;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: left;
   }
 </style>
 
 </head>
 
 <body>
-  <h1>VibeCheck 411L</h1>
-  <p>Click buttons. This page will fetch data from your Node.js API.</p>
+  <div class="container">
+    <h1>VibeCheck 411L</h1>
+    <p>Click buttons. This page will fetch data from your Node.js API.</p>
 
-  <div>
-    <button id="btnFortune">🔮 Fortune</button>
-    <button id="btnJoke">😂 Joke</button>
-    <button data-mood="happy" class="btnMood">😄 Happy</button>
-    <button data-mood="tired" class="btnMood">🥱 Tired</button>
-    <button data-mood="stressed" class="btnMood">😵‍💫 Stressed</button>
-    <button id="btnSmash">💥 SMASH!</button>
-    <button id="btnSecret">🕵️ Secret</button>
+    <div>
+      <button id="btnFortune">🔮 Fortune</button>
+      <button id="btnJoke">😂 Joke</button>
+      <button data-mood="happy" class="btnMood">😄 Happy</button>
+      <button data-mood="tired" class="btnMood">🥱 Tired</button>
+      <button data-mood="stressed" class="btnMood">😵‍💫 Stressed</button>
+      <button id="btnSmash">💥 SMASH!</button>
+      <button id="btnSecret">🕵️ Secret</button>
+    </div>
+
+    <h2>Output</h2>
+    <pre id="out">Ready...</pre>
   </div>
-
-  <h2>Output</h2>
-  <pre id="out">Ready...</pre>
 
   <script src="app.js"></script>
 </body>
