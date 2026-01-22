@@ -43,3 +43,5 @@ document.getElementById("btnSecret").addEventListener("click", async () => {
   const data = await getJSON(`${API_BASE}/api/secret?code=411L`);
   show(data);
 });
+
+//smash counter 2!!
